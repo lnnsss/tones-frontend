@@ -1,0 +1,114 @@
+/*----fonts-------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik+Maps&display=swap');
+
+/*----variables-------------------------------------------*/
+
+:root {
+    --maxWidth: 1040px;
+    --white: #ffffff;
+    --grey: #9CA3AF;
+    --black: #000000;
+    --mainColor: #007CAD;
+    --baseFontSize: 16px;
+    --baseFontWeight: 400;
+    --baseFontFamily: "Noto Sans", sans-serif;
+    --secondFontFamily: "Rubik Maps", sans-serif;
+}
+
+/*----main-------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    background-color: inherit;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+html, body {
+    height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+body {
+    font-size: var(--baseFontSize);
+    font-weight: var(--baseFontWeight);
+    font-family: var(--baseFontFamily);
+    background-color: var(--white);
+    color: var(--black);
+}
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.__container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: var(--maxWidth);
+}
+.main, main {
+    position: relative;
+    padding: 100px 0;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+.main__container {
+    position: relative;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+img, button {
+    user-select: none;
+}
+button {
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover {
+    filter: brightness(120%);
+}
+button:active {
+    filter: brightness(80%);
+    transition: 0.2s;
+}
+::selection {
+    background-color: var(--mainColor);
+    color: var(--black);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    border: 1px solid inherit;
+    -webkit-text-fill-color: var(--black);
+    -webkit-box-shadow: 0 0 0px 1000px inherit inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
