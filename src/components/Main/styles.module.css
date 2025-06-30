@@ -1,0 +1,42 @@
+.main {
+    height: 100%;
+    width: 100%;
+}
+
+.main__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bg {
+    width: 100%;
+    min-height: 800px;
+    background-image: url('/images/BG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    color: var(--white);
+    font-size: 96px;
+    font-family: var(--secondFontFamily);
+    text-align: center;
+}
+
+/*----media-------------------------------------------*/
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 64px;
+    }
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 48px;
+    }
+}

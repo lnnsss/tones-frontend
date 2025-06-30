@@ -112,6 +112,45 @@
     background-color: #f5f5f5;
 }
 
+.header.transparent {
+    background-color: transparent;
+    box-shadow: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.transparent .logo,
+.header.transparent .desktopNav a,
+.header.transparent .burger span {
+    color: white;
+}
+.header.transparent .desktopNav a:hover {
+    color: var(--mainColor);
+}
+
+.header.transparent .burger span {
+    background-color: white;
+}
+
+.header.transparent .burger::before,
+.header.transparent .burger::after {
+    background-color: white;
+}
+
+.header.transparent .mobileMenu {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.header.transparent .mobileMenu a {
+    color: white;
+}
+
+.header.transparent .mobileMenu a:hover {
+    color: var(--mainColor);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
 /*----media-------------------------------------------*/
 
 @media (max-width: 768px) {

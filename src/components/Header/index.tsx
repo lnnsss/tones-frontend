@@ -1,18 +1,22 @@
+// Header.jsx
 import React from 'react';
 import s from './styles.module.css';
 import { useStores } from '../../stores/root-store-context';
-import { Link } from 'react-router-dom';
-import {observer} from "mobx-react-lite";
+import { Link, useLocation } from 'react-router-dom';
+import { observer } from "mobx-react-lite";
 
 const Header = observer(() => {
     const {
-        header: { isMenuOpen, toggleMenu },
+        header: { isMenuOpen, toggleMenu, isTransparent },
         token: { token }
     } = useStores();
 
+    const location = useLocation();
+    const isMainPage = location.pathname === '/';
+
     return (
-        <header className={s.header}>
-            <div className={`${s.header__container} __container`}>
+        <header className={`${s.header} ${isMainPage && isTransparent ? s.transparent : ''}`}>
+            <div className={`__container ${s.header__container}`}>
                 <Link to="/" className={s.logo}>ТОНА</Link>
 
                 <nav className={s.desktopNav}>
