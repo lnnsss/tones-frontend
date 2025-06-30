@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
 class HeaderStore {
-    isMenuOpen: Boolean = false;
+    isMenuOpen = false;
 
     constructor() {
         makeAutoObservable(this)
