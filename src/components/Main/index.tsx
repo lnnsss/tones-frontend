@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import s from "./styles.module.css";
 import { useStores } from '../../stores/root-store-context';
+import Carousel from "./components/Carousel.tsx";
+
+const slides = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"];
 
 const Main = () => {
     const {
@@ -20,11 +23,11 @@ const Main = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // initial check
+        handleScroll();
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            setTransparentHeader(false); // reset on unmount
+            setTransparentHeader(false);
         };
     }, []);
 
@@ -34,6 +37,7 @@ const Main = () => {
                 <div className={s.bg} ref={bgRef}>
                     <h1>Одевайся в Тона</h1>
                 </div>
+                <Carousel slides={slides} options={{ loop: true }} />
             </div>
         </div>
     );
