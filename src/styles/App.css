@@ -1,0 +1,25 @@
+/*----formField-------------------------------------------*/
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formField label {
+    font-size: 14px;
+    color: var(--grey);
+}
+
+.formField input {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    transition: border 0.3s;
+}
+
+.formField input:focus {
+    border-color: var(--mainColor);
+    background-color: #ffffff;
+}
