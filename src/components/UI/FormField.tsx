@@ -26,7 +26,7 @@ const FormField: React.FC<FormFieldProps> = ({
                 name={title}
                 placeholder={placeholder}
                 value={value}
-                onChange={onChange}
+                onChange={(e) => onChange(e.target.value)}
             />
         </div>
     );

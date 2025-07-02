@@ -19,7 +19,7 @@ const Login = () => {
                         type="email"
                         placeholder="ivan@mail.ru"
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={setEmail}
                     />
                     <FormField
                         title="password"
@@ -27,7 +27,7 @@ const Login = () => {
                         type="password"
                         placeholder="********"
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={setPassword}
                     />
 
                     <button type="submit" className={s.submitButton}>Войти</button>

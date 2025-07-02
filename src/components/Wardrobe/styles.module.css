@@ -127,3 +127,112 @@
     border-radius: 4px;
     color: #333;
 }
+
+/*----AddItemModal-------------------------------------------*/
+
+.addItemModal {
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    background-color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.addItemModal__scroll {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 8px;
+}
+
+.addItemModal__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.addItemModal__btn {
+    margin-top: 20px;
+    background-color: var(--mainColor);
+    padding: 12px 0;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.imageUpload {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.customFileWrapper {
+    position: relative;
+}
+
+.hiddenFileInput {
+    display: none;
+}
+
+.customFileBtn {
+    display: inline-block;
+    background-color: var(--mainColor);
+    color: var(--white);
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.previewGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.imagePreview {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/*----media-------------------------------------------*/
+
+@media (max-width: 480px) {
+    .addItemModal {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .addItemModal__title {
+        font-size: 20px;
+    }
+
+    .addItemModal__btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .customFileBtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .previewGrid {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+}

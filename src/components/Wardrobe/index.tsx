@@ -13,10 +13,10 @@ const Wardrobe: React.FC = observer(() => {
     const {
         wardrobe: {items}
     } = useStores();
-    const [selectedCategory, setSelectedCategory] = useState("All");
-    const categories = ["All", ...getUniqueCategories(items)];
+    const [selectedCategory, setSelectedCategory] = useState("Все");
+    const categories = ["Все", ...getUniqueCategories(items)];
 
-    const filteredItems = selectedCategory === "All"
+    const filteredItems = selectedCategory === "Все"
         ? items
         : items.filter(item => item.category === selectedCategory);
 

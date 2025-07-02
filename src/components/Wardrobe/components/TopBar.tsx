@@ -1,10 +1,16 @@
 import React from 'react';
 import s from "../styles.module.css";
 import {Link} from "react-router-dom";
+import {observer} from "mobx-react-lite";
+import {useStores} from "../../../stores/root-store-context.ts";
 
-const TopBar = ({categories, selectedCategory, setSelectedCategory}) => {
+const TopBar = observer(({categories, selectedCategory, setSelectedCategory}) => {
+    const {
+        modal: { setAddItemModalActive }
+    } = useStores();
+
     return (
-        <div className={s.topBar}>
+    <div className={s.topBar}>
             <div className={s.filterMenu}>
                 {categories.map((cat, i) => (
                     <button
@@ -15,10 +21,10 @@ const TopBar = ({categories, selectedCategory, setSelectedCategory}) => {
                         {cat}
                     </button>
                 ))}
-                <Link to="add" className={`${s.filterBtn} ${s.addBtn}`}>+</Link>
+                <button onClick={() => setAddItemModalActive(true)} className={`${s.filterBtn} ${s.addBtn}`}>+</button>
             </div>
         </div>
     );
-};
+});
 
 export default TopBar;

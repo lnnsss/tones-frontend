@@ -2,10 +2,12 @@ import { observer } from "mobx-react-lite";
 import { useStores } from "../stores/root-store-context";
 import AdminLayout from "./adminLayout";
 import Layout from "./layout";
+import Modals from "./Modals.tsx";
 
 const Wrapper = observer(() => {
     const {
-        token: { hasRole }
+        token: { hasRole },
+        modal: { isModalActive }
     } = useStores();
 
     const isAdmin = hasRole('ADMIN');
@@ -13,6 +15,7 @@ const Wrapper = observer(() => {
     return (
         <div className="wrapper">
             {isAdmin ? <AdminLayout /> : <Layout />}
+            {isModalActive && <Modals />}
         </div>
     );
 });

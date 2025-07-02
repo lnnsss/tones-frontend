@@ -24,14 +24,14 @@ const Registration = () => {
                         text="Имя"
                         placeholder="Иван"
                         value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        onChange={setName}
                     />
                     <FormField
                         title="surname"
                         text="Фамилия"
                         placeholder="Иванов"
                         value={surname}
-                        onChange={(e) => setSurname(e.target.value)}
+                        onChange={setSurname}
                     />
 
                     <GenderSelector gender={gender} setGender={setGender} />
@@ -42,7 +42,7 @@ const Registration = () => {
                         type="date"
                         placeholder=""
                         value={birthdate}
-                        onChange={(e) => setBirthdate(e.target.value)}
+                        onChange={setBirthdate}
                     />
                     <FormField
                         title="email"
@@ -50,7 +50,7 @@ const Registration = () => {
                         type="email"
                         placeholder="ivan@mail.ru"
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={setEmail}
                     />
                     <FormField
                         title="password"
@@ -58,7 +58,7 @@ const Registration = () => {
                         type="password"
                         placeholder="********"
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={setPassword}
                     />
                     <FormField
                         title="repeatPassword"
@@ -66,7 +66,7 @@ const Registration = () => {
                         type="password"
                         placeholder="********"
                         value={repeatPassword}
-                        onChange={(e) => setRepeatPassword(e.target.value)}
+                        onChange={setRepeatPassword}
                     />
 
                     <button type="submit" className={s.submitButton}>Зарегистрироваться</button>
