@@ -8,6 +8,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    padding: 0 0 20px 0;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
 }
 
 /*----bg-------------------------------------------*/
@@ -59,6 +66,44 @@ h1 {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+}
+
+/*----wardrobe-------------------------------------------*/
+
+.wardrobe {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.wardrobe__header {
+    width: 100%;
+}
+.wardrobe__header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.arrowRight {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--black);
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 900;
+}
+.wardrobe__cards {
+    width: 100%;
+}
+.wardrobe__cards__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+    width: 100%;
 }
 
 /*----media-------------------------------------------*/

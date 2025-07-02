@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import s from "./styles.module.css";
-import {items} from "./items.ts";
 import Card from "./components/Card.tsx";
 import TopBar from "./components/TopBar.tsx";
+import {useStores} from "../../stores/root-store-context.ts";
+import {observer} from "mobx-react-lite";
 
 const getUniqueCategories = (items) => {
     return [...new Set(items.map(item => item.category))];
 };
 
-const Wardrobe: React.FC = () => {
+const Wardrobe: React.FC = observer(() => {
+    const {
+        wardrobe: {items}
+    } = useStores();
     const [selectedCategory, setSelectedCategory] = useState("All");
     const categories = ["All", ...getUniqueCategories(items)];
 
@@ -31,6 +35,6 @@ const Wardrobe: React.FC = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Wardrobe;
