@@ -3,6 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute.tsx";
 
 import MainPage from "../pages/user/MainPage.tsx";
+import WardrobePage from "../pages/user/WardrobePage.tsx";
+import ShopPage from "../pages/user/ShopPage.tsx";
+import AboutPage from "../pages/user/AboutPage.tsx";
 import RegistrationPage from "../pages/user/RegistrationPage.tsx";
 import LoginPage from "../pages/user/LoginPage.tsx";
 import ProfilePage from "../pages/user/ProfilePage.tsx";
@@ -13,6 +16,9 @@ const MainRoutes: React.FC = () => {
     return (
         <Routes>
             <Route path="/" element={<MainPage />} />
+            <Route path="/wardrobe" element={<WardrobePage />} />
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/about" element={<AboutPage />} />
 
             {/* Публичные маршруты для регистрации и входа */}
             <Route element={<ProtectedRoute isProtected={false} redirectTo="/account" />}>

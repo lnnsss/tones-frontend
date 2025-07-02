@@ -1,0 +1,129 @@
+.wardrobe {
+    height: 100%;
+    width: 100%;
+    margin: 60px 0;
+    padding: 60px 0 20px 0;
+}
+
+.wardrobe__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.topBar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.filterMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filterBtn {
+    font-family: var(--baseFontFamily);
+    font-size: 14px;
+    padding: 7px 14px;
+    border: 1px solid var(--black);
+    background-color: transparent;
+    color: var(--black);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.filterBtn:hover,
+.filterBtn.active {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.addBtn {
+    font-weight: bold;
+    padding: 7px 16px;
+    font-size: 20px;
+    line-height: 1;
+    border-color: var(--mainColor);
+    color: var(--mainColor);
+}
+.addBtn:hover {
+    background-color: var(--mainColor);
+    color: var(--white);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+    height: 420px;
+}
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+.mainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+.hasHover {
+    cursor: pointer;
+}
+
+.info {
+    padding: 12px 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.brand {
+    font-size: 13px;
+    color: var(--grey);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.tag {
+    background-color: #f5f5f5;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #333;
+}
