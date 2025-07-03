@@ -128,6 +128,57 @@
     color: #333;
 }
 
+.selectFilters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.selectBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 120px;
+}
+
+.selectLabel {
+    font-size: 14px;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.customSelect {
+    appearance: none;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: var(--baseFontFamily);
+    color: var(--black);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.customSelect:focus {
+    outline: none;
+    border-color: var(--mainColor);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+.emptyState {
+    text-align: center;
+    font-size: 18px;
+    color: var(--grey);
+    margin-top: 40px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+
 /*----AddItemModal-------------------------------------------*/
 
 .addItemModal {

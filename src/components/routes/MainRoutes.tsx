@@ -4,6 +4,7 @@ import ProtectedRoute from "./ProtectedRoute.tsx";
 
 import MainPage from "../pages/user/MainPage.tsx";
 import WardrobePage from "../pages/user/WardrobePage.tsx";
+import OutfitsPage from "../pages/user/OutfitsPage.tsx";
 import ShopPage from "../pages/user/ShopPage.tsx";
 import AboutPage from "../pages/user/AboutPage.tsx";
 import RegistrationPage from "../pages/user/RegistrationPage.tsx";
@@ -17,6 +18,7 @@ const MainRoutes: React.FC = () => {
         <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/wardrobe" element={<WardrobePage />} />
+            <Route path="/outfits" element={<OutfitsPage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/about" element={<AboutPage />} />
 

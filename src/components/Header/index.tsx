@@ -22,6 +22,7 @@ const Header = observer(() => {
                 <nav className={s.desktopNav}>
                     <ul>
                         <li><Link to="/wardrobe">Гардероб</Link></li>
+                        <li><Link to="/outfits">Аутфиты</Link></li>
                         <li><Link to="/shop">Магазин</Link></li>
                         <li><Link to="/about">О нас</Link></li>
                         {token ? (
