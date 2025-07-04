@@ -47,7 +47,7 @@ const Header = observer(() => {
                     <li><Link to="/shop" onClick={toggleMenu}>Магазин</Link></li>
                     <li><Link to="/about" onClick={toggleMenu}>О нас</Link></li>
                     {token ? (
-                        <li><Link to="/account" onClick={toggleMenu}>Аккаунт</Link></li>
+                        <li><Link to="/profile" onClick={toggleMenu}>Аккаунт</Link></li>
                     ) : (
                         <>
                             <li><Link to="/register" onClick={toggleMenu}>Регистрация</Link></li>

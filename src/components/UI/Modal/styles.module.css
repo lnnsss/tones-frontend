@@ -21,3 +21,31 @@
     align-items: center;
     padding: 15px;
 }
+
+/*----errorModal-------------------------------------------*/
+
+.modalBox {
+    background-color: var(--white);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.modalMessage {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modalButton {
+    background-color: var(--mainColor);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}

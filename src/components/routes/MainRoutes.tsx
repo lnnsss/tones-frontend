@@ -23,7 +23,7 @@ const MainRoutes: React.FC = () => {
             <Route path="/about" element={<AboutPage />} />
 
             {/* Публичные маршруты для регистрации и входа */}
-            <Route element={<ProtectedRoute isProtected={false} redirectTo="/account" />}>
+            <Route element={<ProtectedRoute isProtected={false} redirectTo="/profile" />}>
                 <Route path="/registration" element={<RegistrationPage />} />
                 <Route path="/login" element={<LoginPage />} />
             </Route>
