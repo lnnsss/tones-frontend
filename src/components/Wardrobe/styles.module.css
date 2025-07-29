@@ -183,7 +183,7 @@
 
 .addItemModal {
     width: 100%;
-    max-width: 600px;
+    min-width: 600px;
     height: 80vh;
     background-color: var(--white);
     border-radius: 20px;
@@ -262,6 +262,12 @@
 }
 
 /*----media-------------------------------------------*/
+
+@media (max-width: 768px) {
+    .addItemModal {
+        min-width: 0px;
+    }
+}
 
 @media (max-width: 480px) {
     .addItemModal {

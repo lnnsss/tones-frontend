@@ -3,10 +3,12 @@ import s from "../styles.module.css";
 import FormField from "../../UI/FormField.tsx";
 import ImageUpload from "./ImageUpload.tsx";
 import {useStores} from "../../../stores/root-store-context.ts";
+import {observer} from "mobx-react-lite";
 
-const AddItemModal = () => {
+const AddItemModal = observer(() => {
     const {
-        modal: { closeModals }
+        modal: { closeModals },
+        wardrobe: { addItem }
     } = useStores();
     const [title, setTitle] = useState<string>("");
     const [color, setColor] = useState<string>("");
@@ -16,7 +18,20 @@ const AddItemModal = () => {
     const [season, setSeason] = useState<string>("");
     const [fit, setFit] = useState<string>("");
 
+    // временно пока без загрузки картинок
+    const [images] = useState<string[]>([]);
+
     const handleAdd = () => {
+        addItem({
+            title,
+            color,
+            brand,
+            category,
+            subcategory,
+            season,
+            fit,
+            images
+        });
         closeModals();
     }
 
@@ -38,6 +53,6 @@ const AddItemModal = () => {
             <button className={s.addItemModal__btn} onClick={handleAdd} >Добавить</button>
         </div>
     );
-};
+});
 
 export default AddItemModal;

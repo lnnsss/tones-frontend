@@ -66,6 +66,11 @@ class WardrobeStore {
     setItems = (newItems) => {
         this.items = newItems;
     };
+
+    addItem = (newItem) => {
+        const newId = this.items.length > 0 ? Math.max(...this.items.map(i => i.id)) + 1 : 1;
+        this.items.push({ id: newId, ...newItem });
+    };
 }
 
 export default new WardrobeStore()
